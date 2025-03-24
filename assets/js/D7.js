@@ -22,15 +22,15 @@ function numArray() {
   let number = [];
 
   for (let i = 0; i < 10; i++) {
-    let element = number.push(i);
-    let randomNum = Math.floor(Math.random(element) * 101);
-    console.log(randomNum);
+    let randomNum = Math.floor(Math.random() * 101);
+    number.push(randomNum);
   }
 
   return number;
 }
 
-numArray();
+console.log(numArray());
+
 /* ESERCIZIO 3 (filter)
   Scrivi una funzione per ricavare solamente i valori PARI da un array composto da soli valori numerici
 */
