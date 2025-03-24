@@ -56,6 +56,12 @@ numberOfEven();
   Scrivi una funzione per sommare i numeri contenuti in un array
 */
 
+let sumArray = [10, 20, 30, 40, 50];
+let sum = 0;
+
+sumArray.forEach((e) => (sum += e));
+console.log(sum);
+
 /* ESERCIZIO 5 (reduce)
   Scrivi una funzione per sommare i numeri contenuti in un array
 */
