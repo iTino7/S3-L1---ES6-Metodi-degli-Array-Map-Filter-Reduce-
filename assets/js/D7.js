@@ -56,6 +56,8 @@ numberOfEven();
   Scrivi una funzione per sommare i numeri contenuti in un array
 */
 
+console.log("________________________________");
+
 let sumArray = [10, 20, 30, 40, 50];
 let sum = 0;
 
@@ -70,10 +72,22 @@ console.log(sum);
   Scrivi una funzione che, dato un array di soli numeri e un numero n come parametri, ritorni un secondo array con tutti i valori del precedente incrementati di n
 */
 
+console.log("________________________________");
+
+const map1 = sumArray.map((number) => number + 10);
+console.log(map1);
+
+console.log("________________________________");
+
 /* ESERCIZIO 7 (map)
   Scrivi una funzione che, dato un array di stringhe, ritorni un nuovo array contenente le lunghezze delle rispettive stringhe dell'array di partenza
   es.: ["EPICODE", "is", "great"] => [7, 2, 5]
 */
+
+let strMap = ["ciao", "a", "tutti"];
+
+const strMap1 = strMap.map((x) => x.length);
+console.log(strMap1);
 
 /* ESERCIZIO 8 (forEach o for)
   Scrivi una funzione per creare un array contenente tutti i valori DISPARI da 1 a 99.
