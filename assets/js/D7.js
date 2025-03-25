@@ -42,7 +42,7 @@ function numberOfEven() {
 
   for (let i = 0; i < 10; i++) {
     const element = number.push(i);
-    let randomNum = Math.floor(Math.random(element) * 10);
+    let randomNum = Math.floor(Math.random() * 10);
 
     if (randomNum % 2 == 0) {
       console.log(randomNum);
@@ -50,7 +50,7 @@ function numberOfEven() {
   }
 }
 
-numberOfEven();
+console.log(numberOfEven());
 
 /* ESERCIZIO 4 (forEach)
   Scrivi una funzione per sommare i numeri contenuti in un array
@@ -92,6 +92,20 @@ console.log(strMap1);
 /* ESERCIZIO 8 (forEach o for)
   Scrivi una funzione per creare un array contenente tutti i valori DISPARI da 1 a 99.
 */
+
+const oddOnly = () => {
+  const array = [];
+  for (let i = 0; i < 100; i++) {
+    if (i % 2 !== 0) {
+      array.push(i);
+    }
+  }
+  return array;
+};
+
+console.log(oddOnly());
+
+console.log("________________________________");
 
 /* Questo array di film verrà usato negli esercizi a seguire. Non modificarlo e scorri oltre per riprendere gli esercizi :) */
 const movies = [
@@ -212,6 +226,19 @@ const movies = [
 /* ESERCIZIO 9 (forEach)
   Scrivi una funzione per trovare il film più vecchio nell'array fornito.
 */
+
+const findMovie = (array) => {
+  let element = { Year: 2400 };
+  array.forEach((movie) => {
+    let currentYear = parseInt(movie.Year);
+    if (currentYear < element.Year) {
+      element = movie;
+    }
+  });
+  return element;
+};
+
+console.log(findMovie(movies));
 
 /* ESERCIZIO 10
   Scrivi una funzione per ottenere il numero di film contenuti nell'array fornito.
